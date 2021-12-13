@@ -12,6 +12,8 @@ void setup() {
   myPort = new Serial( this, Serial.list()[5], 9600 );
   myPort.bufferUntil('\n');
 
+  delay(3000);//Arduinoが再起動するまで3秒待機
+  
   myPort.write('A');
 }
 
